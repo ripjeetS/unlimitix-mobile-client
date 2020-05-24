@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "987247041884",
+    "firebase_url": "https://unlimitix-82173.firebaseio.com",
+    "project_id": "unlimitix-82173",
+    "storage_bucket": "unlimitix-82173.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987247041884:android:f7e01f8b637ad40cda3599",
+        "android_client_info": {
+          "package_name": "org.c4dhi.mobilecoach.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987247041884-hn4a6fto0l8152qnhqib9rktb1iqs8lb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.c4dhi.mobilecoach.client",
+            "certificate_hash": "76c3f1eef8b5e1c7139afff0fb71bc3ad6822d51"
+          }
+        },
+        {
+          "client_id": "987247041884-g4mjqlt4b1gtf0b4snf5827vc4g9t676.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBimJ4mWmTwnb2XQandG61NhmA7moQ6BZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987247041884-g4mjqlt4b1gtf0b4snf5827vc4g9t676.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
