@@ -86,4 +86,4 @@ Add the following snippet to your user settings:
     }
 ```
 
-**Version 2.0**
+
