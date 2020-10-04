@@ -635,17 +635,6 @@ function convertServerMessageToGiftedChatMessages (
           }
           break
         }
-        // Show new Measurement-Form
-        case 'add-measurement': {
-          message.type = 'open-component'
-          message.custom = {
-            ...message.custom,
-            // Component to be opened on Tap
-            component: 'new-measurement',
-            buttonTitle: parsedCommand.content
-          }
-          break
-        }
         // Show InfoCardsLibrary Command
         case 'show-infoCardsLibrary': {
           message.type = 'open-component'
@@ -665,17 +654,6 @@ function convertServerMessageToGiftedChatMessages (
             component: 'link',
             buttonTitle: parsedCommand.contentWithoutFirstValue,
             content: parsedCommand.value
-          }
-          break
-        }
-        // Show level-progress Command
-        case 'show-level-progress': {
-          message.type = 'level-progress'
-          message.custom = {
-            ...message.custom,
-            level: parsedCommand.values[0],
-            task: parsedCommand.values[1],
-            progress: parsedCommand.values[2]
           }
           break
         }

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.c4dhi.mobilecoach.client"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="0.0.1" >
 
     <uses-sdk
         android:minSdkVersion="23"
@@ -38,10 +38,11 @@
         android:required="false" />
     <uses-feature
         android:name="android.hardware.camera.autofocus"
-        android:required="false" /> <!-- Required to access Google Play Licensing -->
-    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- for android -->
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- Required to access Google Play Licensing -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" /> <!-- for android -->
     <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
@@ -145,12 +146,8 @@
 
 
         <!-- ADDED FOR FABRIC - START -->
-        <!--
-        <meta-data
-          android:name="io.fabric.ApiKey"
-          android:value="FABRIC_API_KEY_HERE"
-        />
-        -->
+
+
         <!-- ADDED FOR FABRIC - END -->
         <provider
             android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
@@ -163,52 +160,20 @@
         </provider>
         <!--
              FirebaseMessagingService performs security checks at runtime,
-             but set to not exported to explicitly avoid allowing another app to call it.
+             no need for explicit permissions despite exported="true"
         -->
         <service
             android:name="com.google.firebase.messaging.FirebaseMessagingService"
-            android:exported="false" >
+            android:exported="true" >
             <intent-filter android:priority="-500" >
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name="com.google.firebase.components.ComponentDiscoveryService"
-            android:directBootAware="true"
-            android:exported="false" >
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service> <!-- Suppress warning about unrestricted access to this receiver this is need to check which app store installed the app -->
-        <receiver
-            android:name="org.piwik.sdk.InstallReferrerReceiver"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="org.c4dhi.mobilecoach.client.provider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
-        </provider>
+        </service>
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
@@ -216,29 +181,26 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="org.c4dhi.mobilecoach.client" />
             </intent-filter>
         </receiver>
+        <!--
+             FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-            android:enabled="true"
-            android:exported="false" >
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
@@ -250,28 +212,25 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <service
-            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-            android:exported="false" >
-            <meta-data
-                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-                android:value="cct" />
-        </service>
-        <service
-            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+        <activity
+            android:name="androidx.biometric.DeviceCredentialHandlerActivity"
+            android:exported="true"
+            android:theme="@style/DeviceCredentialHandlerTheme" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="org.c4dhi.mobilecoach.client.provider"
             android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" >
-        </service>
-
-        <receiver
-            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-            android:exported="false" />
-
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
         <provider
             android:name="com.crashlytics.android.CrashlyticsInitProvider"
             android:authorities="org.c4dhi.mobilecoach.client.crashlyticsinitprovider"
             android:exported="false"
-            android:initOrder="100" />
+            android:initOrder="90" />
     </application>
 
 </manifest>

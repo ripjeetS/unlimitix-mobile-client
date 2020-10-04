@@ -3,6 +3,7 @@ import { View, Alert, Linking, Platform } from 'react-native'
 import { GiftedChat, LoadEarlier, Message, Day } from 'react-native-gifted-chat'
 import PMNavigationBar from '../../Components/Navbar'
 import { addNavigationHelpers } from 'react-navigation'
+import ConnectionStateButton from '../../Components/ConnectionStateButton'
 // import {Icon} from 'react-native-elements'
 // Actions
 import ServerMessageActions from './../../Redux/MessageRedux'
@@ -308,11 +309,6 @@ class Chat extends Component {
   }
 
   renderCustomView (props) {
-    // const {currentMessage} = props
-    // return (
-    //   <CustomView message={currentMessage} />
-    // )
-    // // )
     const { currentMessage } = props
     switch (currentMessage.type) {
       case 'intention':
@@ -490,33 +486,19 @@ class Chat extends Component {
   }
 
   renderMessageText (props) {
-    const { currentMessage } = props
-    switch (currentMessage.type) {
-      case 'level-progress':
-        const taskId = currentMessage.custom.task
-        const levelId = currentMessage.custom.level
-        return (
-          <TaskProgressMessage
-            taskId={taskId}
-            levelId={levelId}
-            progress={parseInt(currentMessage.custom.progress)}
-          />
-        )
-      default:
-        return (
-          <PMMessageText
-            {...props}
-            linkStyle={TextBubbleStyle.textStyle.link}
-            currentMessage={props.currentMessage}
-            onPress={() =>
-              this.openComponent({
-                custom: { component: 'progress' }
-              })
-            }
-          />
-        )
-    }
-  }
+    return (
+      <PMMessageText
+        {...props}
+        linkStyle={TextBubbleStyle.textStyle.link}
+        currentMessage={props.currentMessage}
+        onPress={() =>
+          this.openComponent({
+            custom: { component: 'progress' }
+          })
+        }
+      />
+    )
+}
 
   renderTicks (currentMessage) {
     return <Ticks currentMessage={currentMessage} />
@@ -526,7 +508,7 @@ class Chat extends Component {
    * The Camera Button is just for Debugging
    */
   renderNavigationbar () {
-    const { hideNavigationBar, coach } = this.props
+    const { hideNavigationBar, coach, connectionState } = this.props
     if (hideNavigationBar) return null
     else {
       let title = I18n.t('Chat.title', {
@@ -536,6 +518,16 @@ class Chat extends Component {
         <PMNavigationBar
           title={title}
           props={this.props}
+          rightButton={
+          <View>
+            <ConnectionStateButton
+              onPress={() => {
+                this.showConnectionStateMessage(connectionState)
+              }}
+              connectionState={connectionState}
+            />
+          </View>
+          }
         />
       )
     }
@@ -590,6 +582,36 @@ class Chat extends Component {
         break
       }
     }
+  }
+
+  showConnectionStateMessage = (connectionState) => {
+    log.action('GUI', 'ConnectionCheck', connectionState)
+
+    let alertMessage = null
+    switch (connectionState) {
+      case ConnectionStates.INITIALIZING:
+      case ConnectionStates.INITIALIZED:
+        alertMessage = I18n.t('ConnectionStates.initialized')
+        break
+      case ConnectionStates.CONNECTING:
+      case ConnectionStates.RECONNECTING:
+        alertMessage = I18n.t('ConnectionStates.connecting')
+        break
+      case ConnectionStates.CONNECTED:
+      case ConnectionStates.SYNCHRONIZATION:
+        alertMessage = I18n.t('ConnectionStates.connected')
+        break
+      case ConnectionStates.SYNCHRONIZED:
+        alertMessage = I18n.t('ConnectionStates.synchronized')
+        break
+    }
+
+    Alert.alert(
+      I18n.t('ConnectionStates.connectionToCoach'),
+      alertMessage,
+      [{ text: I18n.t('Common.ok'), onPress: () => true }],
+      { cancelable: false }
+    )
   }
 
   notifyServer (component, currentMessage = null) {
@@ -679,25 +701,6 @@ class Chat extends Component {
         this.props.sendIntention(null, 'select-many-modal-closed', null)
         break
       }
-      case 'new-measurement-closed': {
-        log.debug('add-measurement closed sent')
-        this.props.sendIntention(null, 'add-measurement-closed', null)
-        break
-      }
-      case 'new-measurement-completed': {
-        let relatedMessageId = currentMessage._id.substring(
-          0,
-          currentMessage._id.lastIndexOf('-')
-        )
-        log.debug(
-          'new-measurement closed and completed sent for message',
-          relatedMessageId
-        )
-        this.props.markMessageAsDisabled(relatedMessageId)
-        this.props.sendIntention(null, 'add-measurement-closed', null)
-        this.props.sendIntention(null, 'add-measurement-completed', null)
-        break
-      }
     }
   }
 
@@ -749,15 +752,6 @@ class Chat extends Component {
       }
       case 'link': {
         Linking.openURL(content)
-        break
-      }
-      case 'new-measurement': {
-        let onClose = (completed) => {
-          if (completed) {
-            this.notifyServer('new-measurement-completed', currentMessage)
-          } else this.notifyServer('new-measurement-closed')
-        }
-        showModal(component, {}, onClose)
         break
       }
       case 'infoCardsLibrary': {

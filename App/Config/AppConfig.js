@@ -40,7 +40,6 @@ export default {
       // Levels: 'DEBUG', 'INFO', 'WARN', 'ERROR', 'OFF', 'CRASHLYTICS'
       defaultLevel: 'DEBUG', // 'OFF' to deactivate the WHOLE logger (also exceptions)
       trackActivities: false,
-      trackingURL: 'https://---/piwik/piwik.php',
       trackingId: 5,
       loggerLevels: {
         'Components/CameraComponent': 'INFO',
@@ -57,11 +56,11 @@ export default {
       }
     },
     typingIndicator: {
-      fastMode: true,
+      fastMode: false,
       // typing speed (words/minute)
-      coachTypingSpeed: 200,
+      coachTypingSpeed: 400,
       // max delay for larger msgs (in ms)
-      maxTypingDelay: 15000,
+      maxTypingDelay: 5000,
       // delay before active elements (in ms)
       interactiveElementDelay: 300
     },
@@ -77,7 +76,7 @@ export default {
       showExpiryAlert: true
     },
     startup: {
-      automaticallyRequestPushPermissions: false,
+      automaticallyRequestPushPermissions: true,
       automaticallyConnectOnFirstStartup: true,
       automaticallyShareObserverAccessToken: false,
       automaticallyShareParticipantAccessToken: false,
@@ -94,24 +93,17 @@ export default {
       role: 'participant', // Can be: participant, supervisor, observer, or team-manager
       defaultNickname: 'MobileCoach Client User',
       interventionPattern: 'Unlimibot',
-      interventionPassword: 'lnqwBbgppE0tblnikQRn',
-      androidSenderId: '1234567890',
+      interventionPassword: 'InqwBbgppE0tblnikQRn',
+      androidSenderId: '987247041884',
       localDeepstreamURL: 'ws://127.0.0.1:8082/deepstream',
       localRestURL: 'http://127.0.0.1:8080/PMCP/api/v02/',
       localMediaURL: 'http://127.0.0.1:8080/PMCP/files/',
-      remoteDeepstreamURL: 'wss://http://167.71.46.73:8082/deepstream',
-      remoteRestURL: 'https://http://167.71.46.73:8082/PMCP/api/v02/',
-      remoteMediaURL: 'https://http://167.71.46.73:8082/PMCP/files/',
+      remoteDeepstreamURL: 'wss://bot.unlimitix.com/deepstream',
+      remoteRestURL: 'https://bot.unlimitix.com/PMCP/api/v02/',
+      remoteMediaURL: 'https://bot.unlimitix.com/PMCP/files/',
       // Whether or not user uploads are protected with auth-tokens
       mediaUploadsWithAuthenticiation: true
     },
     supportedLanguages: ['de', 'en'],
-    mobileCoachClient: {
-      shareUrl: {
-        fr: 'https://www.shareurl-fr.fr',
-        it: 'https://www.shareurl-it.it',
-        de: 'https://www.shareurl-de.de'
-      }
-    }
   }
 }

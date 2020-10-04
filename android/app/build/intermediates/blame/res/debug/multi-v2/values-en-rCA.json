@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ayush/Desktop/mobilecoach-mobile-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "/home/ayush/mobilecoach-mobile-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/home/ayush/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/62904854719945b8a63172ca3afffcf9/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/home/ayush/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0.aar/6947bdd351a951079035ffa05960ff76/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/ayush/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/6e69e31d05284f81e6532cd38ffc75cb/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/home/ayush/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/9b8bc8c6487970341e59032c7e4edba7/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
