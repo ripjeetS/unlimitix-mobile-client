@@ -11,7 +11,8 @@ import I18n from '../../I18n/I18n'
 import MessageActions from '../../Redux/MessageRedux'
 
 // Adjust to the appropriate next screen
-const nextScreen = 'ScreenLanguageSelection'
+//const nextScreen = 'ScreenLanguageSelection'
+const nextScreen = 'ScreenCoachSelection'
 
 class ScreenStartWithLogo extends Component {
   componentDidMount () {

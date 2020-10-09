@@ -3,10 +3,15 @@
 
 const brand = {
   colors: {
-    primary: '#2c3e50',
+    //primary: '#2c3e50',
+    //primary: '#edff4c',
+    primary: '#3764a8',
     primaryText: '#fff',
+    //primaryText: '#2c3e50',
     buttonBackground: '#3498db',
+    //buttonBackground: '#edff4c',
     buttonText: '#fff',
+    //buttonText: '#000',
     backgroundMain: '#fff',
     textMain: '#3c3c3c',
     background1: '#f7f7f7',

@@ -1,11 +1,11 @@
 {
   "Onboarding": {
-    "title": "MC Mobile App",
-    "subtitle": "A warm welcome!",
+    "title": "Unlimibot",
+    "subtitle": "Motivates you. Educates you. Helps with better habits.",
     "next": "Next",
     "chooseLanguage": "Please choose the language",
     "chooseCoach": "Please choose your coach",
-    "welcome": "Great choice!\n\nI am happy to accompany you as your digital coach.",
+    "welcome": "Great choice!\n\nI am happy to accompany you as your digital nutrition coach.",
     "start": "Let's go",
     "checkQrUsageSubtitle": "How do you want to proceed?",
     "qrAvailable": "With QR-Code",
