@@ -50,7 +50,7 @@ export default class NavButton extends Component {
 NavButton.defaultProps = {
   iconStyle: {
     size: 25,
-    color: '#FFFFFF'
+    color: '#22F9EA'
   }
 }
 

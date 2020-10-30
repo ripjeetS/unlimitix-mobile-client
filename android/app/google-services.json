@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:987247041884:android:8d68596d0d72b5e8da3599",
         "android_client_info": {
-          "package_name": "org.c4dhi.mobilecoach.client"
+          "package_name": "org.unlimitix.unlimibot.client"
         }
       },
       "oauth_client": [

@@ -103,7 +103,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.c4dhi.mobilecoach.client"
+        applicationId "org.unlimitix.unlimibot.client"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

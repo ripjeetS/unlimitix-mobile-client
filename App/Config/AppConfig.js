@@ -8,9 +8,9 @@ export default {
   // camelCase name of app, e.g., demoXyz
   // (CAUTION 1: MUST be adjusted for encrypted apps!!!!)
   // (CAUTION 2: Parameter AppConfig.mobileCoachClient must be changed to the same name)
-  project: "mobileCoachClient",
+  project: "Unlimibot",
   // Project name as it can be presented to the customer
-  projectName: "MobileCoach Client App",
+  projectName: "Unlimibot",
   // Encryption secret for instance of app project.
   projectSecret: "mc-client-top-secret",
 

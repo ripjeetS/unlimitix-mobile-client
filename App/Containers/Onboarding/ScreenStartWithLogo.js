@@ -22,23 +22,24 @@ class ScreenStartWithLogo extends Component {
   render () {
     const { sendPlatformIntention } = this.props
     const { navigate } = this.props.navigation
+
+             /* <View style={styles.poweredByContainer}>
+                <Image
+                  style={styles.poweredByImage}
+                  source={Images.poweredByLogo}
+                />
+              </View>*/
     return (
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <View style={styles.logoContainer}>
             <Image style={styles.logoImage} source={Images.appLogo} />
           </View>
-          <View style={styles.poweredByContainer}>
-            <Image
-              style={styles.poweredByImage}
-              source={Images.poweredByLogo}
-            />
-          </View>
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.title}>{I18n.t('Onboarding.title')}</Text>
           <Text style={styles.subtitle}>{I18n.t('Onboarding.subtitle')}</Text>
-          <NextButton
+          <NextButton style={styles.btn}
             text={I18n.t('Onboarding.next')}
             onPress={() => {
               sendPlatformIntention(Platform.OS)
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'stretch',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#e3e7e8',
     ...ifIphoneX({ paddingTop: 40 })
   },
   logoContainer: { flex: 1, flexDirection: 'row', alignItems: 'center' },
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-around',
     marginHorizontal: 30,
-    alignSelf: 'stretch'
+    alignSelf: 'stretch',
   },
   title: {
     fontSize: normalize(25),
@@ -96,5 +97,8 @@ const styles = StyleSheet.create({
     color: Colors.onboarding.text,
     textAlign: 'center',
     fontSize: normalize(18)
+  },
+  btn: {
+    backgroundColor: 'white'
   }
 })

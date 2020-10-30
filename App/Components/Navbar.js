@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     }),
     left: 24,
     justifyContent: 'center',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   }
 })
 
@@ -106,7 +106,7 @@ const NavigationBarStyles = {
     hidden: false
   },
   title: {
-    tintColor: 'white',
+    tintColor: Colors.navigationBar.text,
     height: 50
   }
 }

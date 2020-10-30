@@ -34,22 +34,22 @@ const colors = {
   },
   onboarding: {
     background: Brand.colors.primary,
-    text: Brand.colors.buttonText,
+    text: Brand.colors.onboardingText,
     loadingIndicator: Brand.colors.buttonBackground
   },
   statusBar: {
     background: Platform.OS === 'ios' ? 'transparent' : '#000'
   },
   navigationBar: {
-    background: Brand.colors.primary,
-    text: '#fff'
+    background: Brand.colors.navBarBackground,
+    text: Brand.colors.navBarText
   },
   sideMenu: {
-    background: Brand.colors.backgroundMain,
+    background: Brand.colors.sideMenuBackground,
     buttonBackground: Brand.colors.backgroundMain,
     text: Brand.colors.textMain,
     textDisabled: Brand.colors.grey2,
-    actionButton: Brand.colors.primary
+    actionButton: Brand.colors.buttonBackground
   },
   tabBar: {
     text: Brand.colors.textMain,

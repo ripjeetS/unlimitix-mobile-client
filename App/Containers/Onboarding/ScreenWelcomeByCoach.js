@@ -94,7 +94,7 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#e3e7e8',
     ...ifIphoneX({ paddingTop: 40 })
   },
   textContainer: {
