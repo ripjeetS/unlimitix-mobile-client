@@ -332,8 +332,8 @@ class ReduxNavigation extends Component {
 const mapStateToProps = (state) => ({
   nav: state.nav,
   language: state.settings.language,
-  sideMenuOpen: state.guistate.sideMenuOpen,
-  sideMenuGestures: state.guistate.sideMenuGestures,
+  //sideMenuOpen: state.guistate.sideMenuOpen,
+  //sideMenuGestures: state.guistate.sideMenuGestures,
   tutorialCompleted: state.settings.tutorialCompleted,
   storyProgress: state.storyProgress
 })

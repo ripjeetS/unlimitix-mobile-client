@@ -275,7 +275,7 @@ public final class R {
         public static final int exo_track_surround_5_point_1 = 0x7f0b0078;
         public static final int exo_track_surround_7_point_1 = 0x7f0b0079;
         public static final int exo_track_unknown = 0x7f0b007a;
-        public static final int status_bar_notification_info_overflow = 0x7f0b0090;
+        public static final int status_bar_notification_info_overflow = 0x7f0b008f;
     }
     public static final class style {
         private style() {}

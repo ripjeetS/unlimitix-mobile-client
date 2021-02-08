@@ -998,14 +998,14 @@ public final class R {
         public static final int common_signin_button_text = 0x7f0b0053;
         public static final int common_signin_button_text_long = 0x7f0b0054;
         public static final int fcm_fallback_notification_channel_label = 0x7f0b007b;
-        public static final int gcm_fallback_notification_channel_label = 0x7f0b0082;
-        public static final int header_description = 0x7f0b0088;
-        public static final int image_button_description = 0x7f0b0089;
-        public static final int image_description = 0x7f0b008a;
-        public static final int link_description = 0x7f0b008c;
-        public static final int search_description = 0x7f0b008e;
-        public static final int search_menu_title = 0x7f0b008f;
-        public static final int status_bar_notification_info_overflow = 0x7f0b0090;
+        public static final int gcm_fallback_notification_channel_label = 0x7f0b0081;
+        public static final int header_description = 0x7f0b0087;
+        public static final int image_button_description = 0x7f0b0088;
+        public static final int image_description = 0x7f0b0089;
+        public static final int link_description = 0x7f0b008b;
+        public static final int search_description = 0x7f0b008d;
+        public static final int search_menu_title = 0x7f0b008e;
+        public static final int status_bar_notification_info_overflow = 0x7f0b008f;
     }
     public static final class style {
         private style() {}

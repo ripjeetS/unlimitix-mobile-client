@@ -7,4 +7,4 @@ import { AppRegistry } from 'react-native'
 import VersionSwitch from './VersionSwitch'
 import { name as appName } from './app.json'
 
-AppRegistry.registerComponent(appName, () => VersionSwitch)
+AppRegistry.registerComponent('Unlimibot', () => VersionSwitch)

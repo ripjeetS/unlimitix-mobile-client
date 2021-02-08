@@ -32,7 +32,7 @@ class PMNavigationBar extends Component {
             title: title,
             tintColor: NavigationBarStyles.title.tintColor
           }}
-          leftButton={leftButton || this.defaultLeftButton}
+         // leftButton={leftButton || this.defaultLeftButton}
           rightButton={rightButton}
         />
         <Badge

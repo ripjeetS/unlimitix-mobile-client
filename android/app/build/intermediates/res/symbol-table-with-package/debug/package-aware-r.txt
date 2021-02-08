@@ -1,4 +1,4 @@
-org.unlimitix.unlimibot.client
+unlimitix.unlimibot.client
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1209,7 +1209,6 @@ string fingerprint_description
 string fingerprint_hint
 string fingerprint_not_recognized
 string fingerprint_success
-string firebase_database_url
 string gcm_defaultSenderId
 string gcm_fallback_notification_channel_label
 string google_api_key

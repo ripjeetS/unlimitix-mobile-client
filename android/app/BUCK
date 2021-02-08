@@ -40,7 +40,7 @@ android_build_config(
 
 android_resource(
     name = "res",
-    package = "org.unlimitix.unlimibot.client",
+    package = "unlimitix.unlimibot.client",
     res = "src/main/res",
 )
 

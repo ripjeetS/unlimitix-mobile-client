@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">987247041884-g4mjqlt4b1gtf0b4snf5827vc4g9t676.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://unlimitix-82173.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">987247041884</string>
-    <string name="google_api_key" translatable="false">AIzaSyBimJ4mWmTwnb2XQandG61NhmA7moQ6BZU</string>
-    <string name="google_app_id" translatable="false">1:987247041884:android:8d68596d0d72b5e8da3599</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBimJ4mWmTwnb2XQandG61NhmA7moQ6BZU</string>
-    <string name="google_storage_bucket" translatable="false">unlimitix-82173.appspot.com</string>
-    <string name="project_id" translatable="false">unlimitix-82173</string>
+    <string name="default_web_client_id" translatable="false">389620484960-67dv2l060qkdmd8fd4s8ud22qf5502se.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">389620484960</string>
+    <string name="google_api_key" translatable="false">AIzaSyDRhm0Yz0GLH08njACcgbp4nm0iZLxJFuw</string>
+    <string name="google_app_id" translatable="false">1:389620484960:android:dcd4c7a9670510ddf46c05</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDRhm0Yz0GLH08njACcgbp4nm0iZLxJFuw</string>
+    <string name="google_storage_bucket" translatable="false">unlimibot.appspot.com</string>
+    <string name="project_id" translatable="false">unlimibot</string>
 </resources>

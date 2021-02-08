@@ -103,7 +103,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.unlimitix.unlimibot.client"
+        applicationId "unlimitix.unlimibot.client"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

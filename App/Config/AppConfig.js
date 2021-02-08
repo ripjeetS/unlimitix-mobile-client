@@ -94,7 +94,7 @@ export default {
       defaultNickname: "MobileCoach Client User",
       interventionPattern: "Unlimibot",
       interventionPassword: "InqwBbgppE0tblnikQRn",
-      androidSenderId: "987247041884",
+      androidSenderId: "389620484960",
       localDeepstreamURL: "ws://127.0.0.1:8082/deepstream",
       localRestURL: "http://127.0.0.1:8080/PMCP/api/v02/",
       localMediaURL: "http://127.0.0.1:8080/PMCP/files/",

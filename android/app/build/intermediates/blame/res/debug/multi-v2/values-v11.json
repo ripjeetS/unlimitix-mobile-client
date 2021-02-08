@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Dominik\\Desktop\\Coding\\Unlimitix\\unlimitix-mobile-client\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "/home/ayush/Desktop/unlimitix-mobile-client-master 2/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dominik\\Desktop\\Coding\\Unlimitix\\unlimitix-mobile-client\\node_modules\\react-native-sensitive-info\\android\\build\\intermediates\\packaged_res\\debug\\values-v11\\values-v11.xml",
+                    "source": "/home/ayush/Desktop/unlimitix-mobile-client-master 2/node_modules/react-native-sensitive-info/android/build/intermediates/packaged_res/debug/values-v11/values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

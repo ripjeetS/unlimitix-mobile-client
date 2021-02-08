@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "987247041884",
-    "firebase_url": "https://unlimitix-82173.firebaseio.com",
-    "project_id": "unlimitix-82173",
-    "storage_bucket": "unlimitix-82173.appspot.com"
+    "project_number": "389620484960",
+    "project_id": "unlimibot",
+    "storage_bucket": "unlimibot.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:987247041884:android:8d68596d0d72b5e8da3599",
+        "mobilesdk_app_id": "1:389620484960:android:dcd4c7a9670510ddf46c05",
         "android_client_info": {
-          "package_name": "org.unlimitix.unlimibot.client"
+          "package_name": "unlimitix.unlimibot.client"
         }
       },
       "oauth_client": [
         {
-          "client_id": "987247041884-g4mjqlt4b1gtf0b4snf5827vc4g9t676.apps.googleusercontent.com",
+          "client_id": "389620484960-67dv2l060qkdmd8fd4s8ud22qf5502se.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBimJ4mWmTwnb2XQandG61NhmA7moQ6BZU"
+          "current_key": "AIzaSyDRhm0Yz0GLH08njACcgbp4nm0iZLxJFuw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "987247041884-g4mjqlt4b1gtf0b4snf5827vc4g9t676.apps.googleusercontent.com",
+              "client_id": "389620484960-67dv2l060qkdmd8fd4s8ud22qf5502se.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

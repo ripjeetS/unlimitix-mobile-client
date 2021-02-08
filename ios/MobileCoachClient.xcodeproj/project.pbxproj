@@ -1181,10 +1181,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = AW5CM375Y4;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 97MLQDT253;
+						DevelopmentTeam = AW5CM375Y4;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1926,6 +1927,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = AW5CM375Y4;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1972,7 +1975,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = AW5CM375Y4;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-datepicker/ios/datepicker",
@@ -2019,7 +2024,7 @@
 				CODE_SIGN_ENTITLEMENTS = MobileCoachClient/MobileCoachClient.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 97MLQDT253;
+				DEVELOPMENT_TEAM = AW5CM375Y4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2046,12 +2051,13 @@
 				);
 				INFOPLIST_FILE = MobileCoachClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.c4dhi.mobilecoach.client;
+				PRODUCT_BUNDLE_IDENTIFIER = unlimitix.unlimibot.client;
 				PRODUCT_NAME = MobileCoachClient;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2064,7 +2070,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MobileCoachClient/MobileCoachClient.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97MLQDT253;
+				DEVELOPMENT_TEAM = AW5CM375Y4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2091,12 +2097,13 @@
 				);
 				INFOPLIST_FILE = MobileCoachClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.c4dhi.mobilecoach.client;
+				PRODUCT_BUNDLE_IDENTIFIER = unlimitix.unlimibot.client;
 				PRODUCT_NAME = MobileCoachClient;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
